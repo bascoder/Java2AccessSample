@@ -21,13 +21,13 @@ public class Java2AccessSample {
         try (final Connection con = DriverManager.getConnection(JDBC_URL, "StevenT", null)) {
             System.out.println("Connected successfully");
 
-            printTables(con);
+            printEmployees(con);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    private static void printTables(Connection connection) {
+    private static void printEmployees(Connection connection) {
         // query alle employees
         final String sql = "SELECT * FROM Employees";
 
